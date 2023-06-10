@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam Messages</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Check your email!</h1>
+    <form method="POST" action="{{ url_for('index') }}">
+        <input type="submit" name="all_button" value="Retrieve All Messages">
+        <input type="submit" name="spam_button" value="Retrieve Spam Messages">
+        <input type="submit" name="non_spam_button" value="Retrieve Non-Spam Messages">
+        <input type="submit" name="new_button" value="Retrieve New Messages">
+    </form>
+    <div class="message-container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="message">
+                    <p>From: {{ message.sender }}</p>
+                    <p>Date: {{ message.date }}</p>
+                    <p>Classification: {{ message.classification }}</p>
+                    <p>Message Text:</p>
+                    <p>{{ message.text }}</p>
+                </div>
+                <br>
+            {% endfor %}
+        {% else %}
+            <div class="centered-text">No messages found.</div>
+        {% endif %}
+    </div>
+</body>
+</html>

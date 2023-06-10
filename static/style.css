@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+h2 {
+    color: #555;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.message-container {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #ccc; /* Товщина рамки і колір */
+    background-color: #f5f5f5; /* Колір тла рамки */
+    padding: 10px; /* Відступ всередині рамки */
+    margin-bottom: 20px; /* Відступ між рамками повідомлень */
+    margin-top: 40px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тінь рамки */
+    overflow: auto; /* Додати прокрутку, якщо вміст не влазить */
+    height: 700px; /* Максимальна висота рамки перед появою прокрутки */
+    width: 1000px;
+    border-radius: 10px; /* Заокруглені кути рамки */
+    position: relative;
+}
+
+.centered-text {
+    font-size: 48px; /* Задайте розмір шрифту за потребою */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(0, 0, 0, 0.4);
+}
